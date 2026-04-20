@@ -1,0 +1,28 @@
+version: 2
+updates:
+  - package-ecosystem: gomod
+    directory: /
+    schedule:
+      interval: weekly
+    groups:
+      http:
+        patterns:
+          - "github.com/go-chi/*"
+      auth:
+        patterns:
+          - "github.com/golang-jwt/*"
+      dev:
+        patterns:
+          - "github.com/go-playground/*"
+          - "github.com/google/uuid"
+          - "github.com/spf13/viper"
+          - "golang.org/x/vuln*"
+
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+    groups:
+      actions:
+        patterns:
+          - "*"

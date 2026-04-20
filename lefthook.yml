@@ -1,0 +1,10 @@
+commit-msg:
+  commands:
+    check-msg:
+      run: scripts/check-commit-msg.sh {1}
+
+pre-commit:
+  commands:
+    lint:
+      run: golangci-lint run --fix
+      glob: "*.go"

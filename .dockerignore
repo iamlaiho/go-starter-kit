@@ -1,0 +1,16 @@
+.git
+.gitignore
+.env
+*.env
+bin/
+tmp/
+coverage/
+*.md
+.github/
+.claude/
+lefthook.yml
+.golangci.yml
+docker-compose.yml
+Makefile
+scripts/
+openspec/
